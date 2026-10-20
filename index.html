@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1f6feb">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="WorkLog">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAD1ElEQVR42u3dwXHcMAxGYZmzJeRud2iXkhJzt4vILQdPJtGuViJ+8HsF2CT0CEAUtXp5ff/cgL8xhADkADlADpAD5AA5QA6QA+QAOQBygBw4zm2p2f76+ePgX3j7+JI5AHKAHCAHyAFygBwgB8gBcoAcIAdADpADz+DFi9SQOUAOPI/bmtO+90jYUgfAlus5jh8QXNCVznI8V4gFRWkoxzVOrGBJKzlmadFVkQ5yVHCipSXZctTUoo0igxkG2SpzJEY8MYWEyRG9EOMUSZJj1kbWshtoMXLUeQd6nbexA+Q4eDHOuxJlB7aKHA9fgCtDHzHIbnI8FvRZEc8abbYcD8S6QqBDh50kR/p5ix7nRSrKcVdkD4b13//r1D9e34+xshlnc9fwCu7vjVAz3j6+InYL7hpnNT9GqBlbFKF+DGbwo7Qc7c0I9ePWL7L1Z5HybHl+5tgTqWZnd/dMp4JAo74ZyzI9OKP+5Fu+GLJzUnP9GD2C2Ls/XU6OBVuNuOZjWFimWUsOfWhEuEbNqS71kwdli8sIDZbi0lAOBSUodMMaMvG8uxWsJcd/E+OyaWPn9C+uLDIHCsghbcQlD5kD5eWQNgqG4iI5bG8kBlNZQW051JSaAZE5MFUODUdoSOdnDjWlbFiUFZAD5ECSHLrR3MBOzhy60crBUVZADtzPTQguqOuh1VPmADlADpADGtLz+dYq2rKTOUAOkAPkgIa0Un8qc8zE3UHl4AxrUZLTc4AcIAeWkENPWjYsV8ihJw0NqbKC2nKoLDUDInNgthzajsRg5n06VE1RVrCSHNV+njc0bVxZoGUO1JBD8ghKGzIHouRYNnkUnPjVctjwCArdsIZMuZAcxb+0W9OMKRl3TuZQXCLCNaLXk4LSUw7FZSv//eVhYZlaRTl2romWfuyc1NzmzO+Q6kMLl5UFm4/ircYfblkBTc80WZaHfcYrOoXsH7zPeK3lR5wZtW5lG/uRaMa2bS+v75+5Vbl+CxI9nXKbYHcFqHgKSRe9XOZ47KpXi2z6+EvL8VhWqBDi0GGHyfFw1ZgV66zRxstxpKu4MugRg2wox/Gu87wLUHZgC8nxrBuTZ12MOiMhx1k3rrP23IIeDyXJseU/ns16cBgmR64iic+TI+XIUiT3mEHwu7IRQY8+gBKcOYqnkAYnIDvIUcqSTqdiW8kxV5F+h6UbynGxJY0P0HeW4zxRFnmjYhU5Drqy5vs1i8qBPfhNMJAD5AA5QA6QA+QAOUAOkAPkAMgBcoAcIAfIAXKAHCAHyAFyAOQAOUAOkAPkADlADpAD5AA5gO03JIC92uzgAagAAAAASUVORK5CYII=">
+<link rel="icon" type="image/png" sizes="192x192" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAEBklEQVR42u3dwXXbMBBFURlHJWRvd2iXkhKzt4vIIgVEIiVh5s99BdjA4OFjSIni2/vn9wU4ylICEAgEAoFAIIBAIBAIBAIBBAKBQCAQCCAQHsx18uT//P71kL/z8fUjgQACgUAgEAgEEAgEAoFAIIBAIBAIBAIBBAKBUIE3P+8CCQQCoSdXJfjHvV9vnfw1Vj3QEWP4RKAHS0OmKQK9xpuZJiULtMubUSZlClRHnXiNogSq6U22SYs9hjo9gfquR0AU9RYoYyu31mixx0TGJdCTKn57EmwfAIFK2POoBSs4JAI9a6mevUL1RzhUoJML8/pVaTfgZIHOLMbeleg78hyBDq9BnQUImEJXgY6Vvmbdk+bSQ6ADFT9f7v/+05P/Ysuknsdiz4s5MMjKdxpXhj0fXz+Nrn4PjLasQyvDnktDMhxa7OHQGa5zql95Fn0/T62VQLfXMezrods/x00QaKw9rR1a7OFQ4GX8QHuaTrCEQDfupyFPfN44zSIhtLrYg5qlW2H70kE2SyCHV/eDbNmOJt5VIN1PQBlX8WkP/yGw+gfZCigfh/RA6MoegW6JXPFzVyl2nWISCN0EEj9JISSBECeQ+GlUllcL5OZhWHmXfSaE9ECYIZDzK6/ItRLI+dWuRI4wEAgTBNIARZa6UAJpgDoWyhEGAoFAIJAOemIfXSWBdNBNy+UIwymuSrDxdAjIXQkEAoFAIBAIBLgKe+yVkVugEggEAoFAIEATfa6nRtEEcrHTtFzLPhaceiBookEgEEhjqIOuKpA+OrLUjjAQCATSBjUt0UsF0gblFdkRhiyBnGK9ivNqgZxiYeVd9pn40QNhkkCV337VOn62tAcSCA0FEkIZ8SOBEC2QEKpfhG0C1X8jeiN7Nt5d25lAbioGlHHF7EKH10SBHGR9D69mV2GjHGo02f0C6YRal241KsSQEOpyeDU7woY41G6C/V51EOzQ7VPzqgMOJdhz6fvW5jCHmtpzaf0DU/+K3v0irvtOKNdE3ytE6wW4d/AFd0vFq7AhDgXYc7lc3t4/v2OyvctxljS1uveBDpSsRRSFbYy6CXTGiZoVT5pLG4HO5Eqd0gdMobFAJ8+mvWvQd+RRAp3vb16/GO0GHC7Qo9rkZy9M/RGOFuhS8qXJk9/j3E+g512ub/8kruPHMi0FeuoqbqHvJ3pL0U1kaAIFRFHAHkgQqKNGMfGZ8+MKjZYk6UGUnASqn0aRDzBlClRNo+Bn35IF2m7ShGcmRwj0YpNGPWs7S6DnyTT2Ae25Ap30ySP9BMID8CObIBAIBAKBQACBQCAQCAQCCAQCgUAgEEAgEAgEAoEAAoFAIBAIBAIBBAKBQCAQCCAQCAQCgUAAgUAgEAhh/AWS6dXyKysi/wAAAABJRU5ErkJggg==">
+<title>WorkLog</title>
+<style>
+:root{--bg:#f4f5f7;--card:#fff;--fg:#111;--mut:#666;--ac:#1f6feb;--bd:#ddd;--dan:#d1242f}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#1a1d23;--fg:#eee;--mut:#999;--ac:#4c8dff;--bd:#333}}
+*{box-sizing:border-box}body{margin:0;font:16px system-ui,sans-serif;background:var(--bg);color:var(--fg);padding-bottom:80px}
+header{position:sticky;top:0;z-index:5;background:var(--ac);color:#fff;padding:calc(12px + env(safe-area-inset-top)) 14px 12px;display:flex;align-items:center;gap:8px}
+header h1{font-size:20px;margin:0;flex:1}header button{background:#fff3;color:#fff;border:0}
+.card{background:var(--card);margin:10px;border-radius:14px;padding:12px;box-shadow:0 1px 3px #0002}
+button,input,select,textarea{font:inherit;min-height:48px;border-radius:10px;border:1px solid var(--bd);background:var(--card);color:var(--fg);padding:8px 12px}
+button{cursor:pointer}.pri{background:var(--ac);color:#fff;border:0;font-weight:600}.dan{color:var(--dan)}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0}.row>*{flex:1}
+.chips button{flex:1;font-weight:600}.chips button.on{background:var(--ac);color:#fff}
+input,textarea,select{width:100%}label{font-size:13px;color:var(--mut)}
+.badge{background:var(--dan);color:#fff;border-radius:10px;padding:1px 7px;font-size:12px;margin-left:4px}
+.day h3{margin:4px 0;display:flex;justify-content:space-between;font-size:15px}
+.ent{display:flex;gap:10px;align-items:center;padding:8px 0;border-top:1px solid var(--bd)}
+.ent img{width:56px;height:56px;object-fit:cover;border-radius:8px}.ent .t{flex:1}.ent small{color:var(--mut)}
+.dur{font-weight:700;white-space:nowrap}.new{border-left:4px solid var(--dan);padding-left:6px}
+#timer{font-size:28px;font-weight:700;text-align:center}.hide{display:none!important}
+.tot{display:flex;justify-content:space-around;font-weight:600}
+dialog{border:0;border-radius:14px;background:var(--card);color:var(--fg);width:92vw;max-width:500px}
+#thumb{max-width:100px;border-radius:8px}
+</style></head><body>
+<header><h1>WorkLog</h1><button id="bShare">Send<span id="unsent" class="badge hide"></span></button><button id="bSet">⚙</button></header>
+
+<div class="card" id="add">
+ <div class="row chips" id="chips"><button data-m="15">15m</button><button data-m="30">30m</button><button data-m="60">1h</button><button data-m="120">2h</button></div>
+ <div class="row"><div><label>Duration h:mm</label><input id="dur" placeholder="1:00" inputmode="numeric"></div>
+  <div><label>Timer</label><button id="bTimer" style="width:100%">▶ Start</button></div></div>
+ <div id="timer" class="hide">0:00:00</div>
+ <input id="desc" placeholder="What did you do?" maxlength="200">
+ <label>Tag / project</label><select id="tag"></select>
+ <label>Start (date/time) — change to back-date</label><input id="when" type="datetime-local">
+ <div class="row"><button id="bPh">📷 Add photo</button><input id="photo" type="file" accept="image/*" capture="environment" class="hide"><button id="bClrPh" class="hide">✕</button></div>
+ <img id="thumb" class="hide">
+ <div class="row"><button class="pri" id="bSave">Add entry</button><button id="bCancel" class="hide">Cancel edit</button></div>
+</div>
+
+<div class="card tot"><span>Today <span id="tToday">0:00</span></span><span>Week <span id="tWeek">0:00</span></span></div>
+<div class="card"><div class="row"><input id="q" placeholder="Search…" type="search"><select id="fTag"></select></div></div>
+<div id="list"></div>
+
+<dialog id="dSet"><h3>Settings</h3>
+ <label>Tags (one per line)</label><textarea id="sTags" rows="6"></textarea>
+ <label>Default duration (minutes)</label><input id="sDef" type="number" min="0">
+ <label>Week starts</label><select id="sWk"><option value="1">Monday</option><option value="0">Sunday</option></select>
+ <h3>Data</h3>
+ <div class="row"><button id="xCsv">Download CSV</button><button id="xJson">Download JSON backup</button></div>
+ <div class="row"><button id="xImp">Import JSON backup</button><input id="fImp" type="file" accept=".json,application/json" class="hide"></div>
+ <div class="row"><button class="pri" id="sOk">Save</button><button id="sClose">Close</button></div>
+ <small>Data lives only in this browser on this device. Back up regularly.</small>
+</dialog>
+
+<dialog id="dShare"><h3>Send / export</h3>
+ <p id="shInfo"></p>
+ <label><input type="checkbox" id="shNew" checked style="width:auto;min-height:auto"> Only new (unsent) entries</label>
+ <div class="row"><button class="pri" id="shGo">Share (JSON + CSV)</button></div>
+ <div class="row"><button id="shDl">Download instead</button><button id="shClose">Close</button></div>
+ <small>Uses your phone's share sheet (chat app, Google Drive…). Entries are marked as sent after sharing/downloading.</small>
+</dialog>
+
+<script>
+// Inline manifest (data URL). Limits: Chrome generally won't treat data-URL manifests as installable; "Add to Home screen" still works as a shortcut. Host on HTTPS for full PWA.
+// Inline manifest: Chrome may not offer full "Install" from a data: manifest and has no service worker here
+// (blob/data service workers are not allowed). "Add to Home screen" works from https hosting; full install needs a separate sw.js.
+(()=>{const web=/^https?:$/.test(location.protocol);
+if(web){const l=document.createElement('link');l.rel='manifest';l.href='manifest.json';document.head.appendChild(l);
+ if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(e=>console.warn('SW',e)));return}
+(()=>{const I192='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAEBklEQVR42u3dwXXbMBBFURlHJWRvd2iXkhKzt4vIIgVEIiVh5s99BdjA4OFjSIni2/vn9wU4ylICEAgEAoFAIIBAIBAIBAIBBAKBQCAQCCAQHsx18uT//P71kL/z8fUjgQACgUAgEAgEEAgEAoFAIIBAIBAIBAIBBAKBUIE3P+8CCQQCoSdXJfjHvV9vnfw1Vj3QEWP4RKAHS0OmKQK9xpuZJiULtMubUSZlClRHnXiNogSq6U22SYs9hjo9gfquR0AU9RYoYyu31mixx0TGJdCTKn57EmwfAIFK2POoBSs4JAI9a6mevUL1RzhUoJML8/pVaTfgZIHOLMbeleg78hyBDq9BnQUImEJXgY6Vvmbdk+bSQ6ADFT9f7v/+05P/Ysuknsdiz4s5MMjKdxpXhj0fXz+Nrn4PjLasQyvDnktDMhxa7OHQGa5zql95Fn0/T62VQLfXMezrods/x00QaKw9rR1a7OFQ4GX8QHuaTrCEQDfupyFPfN44zSIhtLrYg5qlW2H70kE2SyCHV/eDbNmOJt5VIN1PQBlX8WkP/yGw+gfZCigfh/RA6MoegW6JXPFzVyl2nWISCN0EEj9JISSBECeQ+GlUllcL5OZhWHmXfSaE9ECYIZDzK6/ItRLI+dWuRI4wEAgTBNIARZa6UAJpgDoWyhEGAoFAIJAOemIfXSWBdNBNy+UIwymuSrDxdAjIXQkEAoFAIBAIBLgKe+yVkVugEggEAoFAIEATfa6nRtEEcrHTtFzLPhaceiBookEgEEhjqIOuKpA+OrLUjjAQCATSBjUt0UsF0gblFdkRhiyBnGK9ivNqgZxiYeVd9pn40QNhkkCV337VOn62tAcSCA0FEkIZ8SOBEC2QEKpfhG0C1X8jeiN7Nt5d25lAbioGlHHF7EKH10SBHGR9D69mV2GjHGo02f0C6YRal241KsSQEOpyeDU7woY41G6C/V51EOzQ7VPzqgMOJdhz6fvW5jCHmtpzaf0DU/+K3v0irvtOKNdE3ytE6wW4d/AFd0vFq7AhDgXYc7lc3t4/v2OyvctxljS1uveBDpSsRRSFbYy6CXTGiZoVT5pLG4HO5Eqd0gdMobFAJ8+mvWvQd+RRAp3vb16/GO0GHC7Qo9rkZy9M/RGOFuhS8qXJk9/j3E+g512ub/8kruPHMi0FeuoqbqHvJ3pL0U1kaAIFRFHAHkgQqKNGMfGZ8+MKjZYk6UGUnASqn0aRDzBlClRNo+Bn35IF2m7ShGcmRwj0YpNGPWs7S6DnyTT2Ae25Ap30ySP9BMID8CObIBAIBAKBQACBQCAQCAQCCAQCgUAgEEAgEAgEAoEAAoFAIBAIBAIBBAKBQCAQCCAQCAQCgUAAgUAgEAhh/AWS6dXyKysi/wAAAABJRU5ErkJggg==',I512='data:image/png;base64,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';
+const base=location.href.split('#')[0].split('?')[0].replace(/[^/]*$/,'');
+const m={name:'WorkLog',short_name:'WorkLog',start_url:base||'.',scope:base||'.',display:'standalone',background_color:'#1f6feb',theme_color:'#1f6feb',
+icons:[{src:I192,sizes:'192x192',type:'image/png',purpose:'any maskable'},{src:I512,sizes:'512x512',type:'image/png',purpose:'any maskable'}]};
+const l=document.createElement('link');l.rel='manifest';l.href='data:application/manifest+json,'+encodeURIComponent(JSON.stringify(m));document.head.appendChild(l);})();})();
+
+const $=id=>document.getElementById(id);
+let db,entries=[],editId=null,photoData=null,timerStart=null,timerInt=null;
+const S=Object.assign({tags:['General','Maintenance','Breakdown','Project','Meeting'],def:60,wk:1,lastTag:''},JSON.parse(localStorage.getItem('wl_settings')||'{}'));
+const saveS=()=>localStorage.setItem('wl_settings',JSON.stringify(S));
+function openDB(){return new Promise((r,j)=>{const q=indexedDB.open('worklog',1);q.onupgradeneeded=()=>q.result.createObjectStore('e',{keyPath:'id'});q.onsuccess=()=>r(q.result);q.onerror=()=>j(q.error)})}
+const tx=(m,f)=>new Promise((r,j)=>{const t=db.transaction('e',m);const s=t.objectStore('e');const out=f(s);t.oncomplete=()=>r(out&&out.result);t.onerror=()=>j(t.error)});
+const all=()=>tx('readonly',s=>s.getAll());const put=e=>tx('readwrite',s=>s.put(e));const del=id=>tx('readwrite',s=>s.delete(id));
+const pad=n=>String(n).padStart(2,'0');
+const fmt=m=>Math.floor(m/60)+':'+pad(Math.round(m%60));
+const localDT=d=>d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())+'T'+pad(d.getHours())+':'+pad(d.getMinutes());
+const dayKey=d=>localDT(d).slice(0,10);
+function parseDur(s){s=(s||'').trim();if(!s)return 0;if(s.includes(':')){const[h,m]=s.split(':');return(+h||0)*60+(+m||0)}if(/h|m/i.test(s)){let t=0;const h=s.match(/([\d.]+)\s*h/i),m=s.match(/(\d+)\s*m/i);if(h)t+=parseFloat(h[1])*60;if(m)t+=+m[1];return t}return parseFloat(s)<=12?parseFloat(s)*60:+s}
+function weekStart(d){const x=new Date(d);x.setHours(0,0,0,0);x.setDate(x.getDate()-((x.getDay()-S.wk+7)%7));return x}
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function fillTags(){$('tag').innerHTML='<option value="">— no tag —</option>'+S.tags.map(t=>`<option>${esc(t)}</option>`).join('');$('tag').value=S.lastTag||'';
+ $('fTag').innerHTML='<option value="">All tags</option>'+S.tags.map(t=>`<option>${esc(t)}</option>`).join('')}
+function resetForm(){editId=null;photoData=null;$('desc').value='';$('dur').value=S.def?fmt(S.def):'';$('when').value=localDT(new Date());$('photo').value='';$('thumb').classList.add('hide');$('bClrPh').classList.add('hide');$('bSave').textContent='Add entry';$('bCancel').classList.add('hide');$('tag').value=S.lastTag||'';document.querySelectorAll('#chips button').forEach(b=>b.classList.remove('on'))}
+
+$('chips').onclick=e=>{const m=e.target.dataset.m;if(!m)return;$('dur').value=fmt(+m);document.querySelectorAll('#chips button').forEach(b=>b.classList.toggle('on',b===e.target))};
+$('bTimer').onclick=()=>{if(!timerStart){timerStart=Date.now();localStorage.setItem('wl_timer',timerStart);startTick()}else{const mins=Math.max(1,Math.round((Date.now()-timerStart)/60000));$('dur').value=fmt(mins);$('when').value=localDT(new Date(timerStart));timerStart=null;localStorage.removeItem('wl_timer');clearInterval(timerInt);$('timer').classList.add('hide');$('bTimer').textContent='▶ Start'}};
+function startTick(){$('bTimer').textContent='■ Stop';$('timer').classList.remove('hide');const f=()=>{const s=Math.floor((Date.now()-timerStart)/1000);$('timer').textContent=Math.floor(s/3600)+':'+pad(Math.floor(s/60)%60)+':'+pad(s%60)};f();timerInt=setInterval(f,1000)}
+
+$('bPh').onclick=()=>$('photo').click();
+$('photo').onchange=async e=>{const f=e.target.files[0];if(!f)return;photoData=await resize(f,800,.75);$('thumb').src=photoData;$('thumb').classList.remove('hide');$('bClrPh').classList.remove('hide')};
+$('bClrPh').onclick=()=>{photoData=null;$('photo').value='';$('thumb').classList.add('hide');$('bClrPh').classList.add('hide')};
+function resize(file,max,q){return new Promise((r,j)=>{const img=new Image();img.onload=()=>{let{width:w,height:h}=img;const k=Math.min(1,max/Math.max(w,h));w=Math.round(w*k);h=Math.round(h*k);const c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(img,0,0,w,h);URL.revokeObjectURL(img.src);r(c.toDataURL('image/jpeg',q))};img.onerror=j;img.src=URL.createObjectURL(file)})}
+
+$('bSave').onclick=async()=>{const mins=parseDur($('dur').value);const desc=$('desc').value.trim();if(!mins&&!desc){alert('Enter a duration or description');return}
+ const old=editId?entries.find(x=>x.id===editId):null;
+ const e={id:editId||Date.now().toString(36)+Math.random().toString(36).slice(2,6),start:new Date($('when').value||Date.now()).toISOString(),mins,desc,tag:$('tag').value,photo:photoData,created:old?.created||Date.now(),updated:Date.now(),exported:null};
+ S.lastTag=e.tag;saveS();await put(e);resetForm();await load()};
+$('bCancel').onclick=resetForm;
+async function editEntry(id){const e=entries.find(x=>x.id===id);editId=id;$('desc').value=e.desc;$('dur').value=fmt(e.mins);$('when').value=localDT(new Date(e.start));if(e.tag&&!S.tags.includes(e.tag)){S.tags.push(e.tag);saveS();fillTags()}$('tag').value=e.tag;photoData=e.photo;$('thumb').src=e.photo||'';$('thumb').classList.toggle('hide',!e.photo);$('bClrPh').classList.toggle('hide',!e.photo);$('bSave').textContent='Save changes';$('bCancel').classList.remove('hide');scrollTo(0,0)}
+async function delEntry(id){if(confirm('Delete this entry?')){await del(id);await load()}}
+
+async function load(){entries=(await all()).sort((a,b)=>b.start.localeCompare(a.start));render()}
+function render(){const q=$('q').value.toLowerCase(),ft=$('fTag').value;
+ const now=new Date(),tk=dayKey(now),ws=weekStart(now);let tT=0,tW=0;
+ entries.forEach(e=>{const d=new Date(e.start);if(dayKey(d)===tk)tT+=e.mins;if(d>=ws)tW+=e.mins});
+ $('tToday').textContent=fmt(tT);$('tWeek').textContent=fmt(tW);
+ const un=entries.filter(e=>!e.exported).length;$('unsent').textContent=un;$('unsent').classList.toggle('hide',!un);
+ const vis=entries.filter(e=>(!ft||e.tag===ft)&&(!q||(e.desc+' '+e.tag).toLowerCase().includes(q)));
+ const g={};vis.forEach(e=>(g[dayKey(new Date(e.start))]??=[]).push(e));
+ let html='',lastWk=null;
+ for(const k of Object.keys(g)){const d=new Date(k+'T12:00');const w=weekStart(d).getTime();
+  if(w!==lastWk){lastWk=w;const wt=vis.filter(e=>weekStart(new Date(e.start)).getTime()===w).reduce((a,e)=>a+e.mins,0);html+=`<div style="margin:14px 14px 0;color:var(--mut);font-size:13px">Week of ${new Date(w).toLocaleDateString()} — ${fmt(wt)}</div>`}
+  const tot=g[k].reduce((a,e)=>a+e.mins,0);
+  html+=`<div class="card day"><h3><span>${d.toLocaleDateString(undefined,{weekday:'short',day:'numeric',month:'short'})}</span><span>${fmt(tot)}</span></h3>`+
+  g[k].map(e=>`<div class="ent ${e.exported?'':'new'}" data-id="${e.id}">${e.photo?`<img src="${e.photo}" data-ph="1">`:''}<div class="t"><div>${esc(e.desc)||'<i>(no description)</i>'}</div><small>${new Date(e.start).toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})}${e.tag?' · '+esc(e.tag):''}${e.exported?'':' · unsent'}</small></div><span class="dur">${fmt(e.mins)}</span><button data-a="e" style="min-width:48px">✎</button><button data-a="d" class="dan" style="min-width:48px">🗑</button></div>`).join('')+'</div>'}
+ $('list').innerHTML=html||'<p style="text-align:center;color:var(--mut)">No entries yet.</p>'}
+$('list').onclick=e=>{const el=e.target.closest('.ent');if(!el)return;const a=e.target.dataset.a;if(a==='e')editEntry(el.dataset.id);else if(a==='d')delEntry(el.dataset.id);else if(e.target.dataset.ph){const w=open();if(w)w.document.write(`<img src="${e.target.src}" style="max-width:100%">`)}};
+$('q').oninput=render;$('fTag').onchange=render;
+
+// Export
+const csvQ=s=>'"'+String(s??'').replace(/"/g,'""')+'"';
+function makeCSV(list){return 'date,start,duration_h,description,tag\n'+list.slice().sort((a,b)=>a.start.localeCompare(b.start)).map(e=>{const d=new Date(e.start);return[dayKey(d),pad(d.getHours())+':'+pad(d.getMinutes()),(e.mins/60).toFixed(2),csvQ(e.desc),csvQ(e.tag)].join(',')}).join('\n')+'\n'}
+const makeJSON=list=>JSON.stringify({app:'WorkLog',version:1,exportedAt:new Date().toISOString(),settings:S,entries:list},null,1);
+const stamp=()=>localDT(new Date()).replace(/[T:]/g,'-');
+function dl(name,text,type){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type}));a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},1000)}
+async function markSent(list){const t=Date.now();for(const e of list){e.exported=t;await put(e)}await load()}
+$('xCsv').onclick=()=>dl(`worklog-${stamp()}.csv`,makeCSV(entries),'text/csv');
+$('xJson').onclick=async()=>{dl(`worklog-backup-${stamp()}.json`,makeJSON(entries),'application/json');await markSent(entries)};
+$('xImp').onclick=()=>$('fImp').click();
+$('fImp').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{const d=JSON.parse(await f.text());const list=d.entries||[];for(const x of list)if(x.id&&x.start)await put(x);
+ if(d.settings?.tags)S.tags=[...new Set([...S.tags,...d.settings.tags])];saveS();fillTags();await load();alert(`Imported ${list.length} entries`)}catch(err){alert('Import failed: '+err.message)}e.target.value=''};
+
+$('bShare').onclick=()=>{const un=entries.filter(e=>!e.exported).length;$('shInfo').textContent=`${entries.length} entries total, ${un} unsent since last export.`;$('dShare').showModal()};
+$('shClose').onclick=()=>$('dShare').close();
+function shareSet(){return $('shNew').checked?entries.filter(e=>!e.exported):entries}
+$('shGo').onclick=async()=>{const list=shareSet();if(!list.length){alert('Nothing to send');return}
+ const s=stamp();const files=[new File([makeJSON(list)],`worklog-${s}.json`,{type:'application/json'}),new File([makeCSV(list)],`worklog-${s}.csv`,{type:'text/csv'})];
+ const title=`WorkLog export ${s} (${list.length} entries, ${fmt(list.reduce((a,e)=>a+e.mins,0))} h)`;
+ if(navigator.canShare&&navigator.canShare({files})){try{await navigator.share({files,title,text:title});await markSent(list);$('dShare').close()}catch(err){if(err.name!=='AbortError')alert('Share failed: '+err.message+' — try Download.')}}
+ else{alert('Sharing files is not supported here; downloading instead.');doDl(list)}};
+$('shDl').onclick=()=>{const l=shareSet();if(l.length)doDl(l)};
+async function doDl(list){const s=stamp();dl(`worklog-${s}.json`,makeJSON(list),'application/json');setTimeout(()=>dl(`worklog-${s}.csv`,makeCSV(list),'text/csv'),400);await markSent(list);$('dShare').close()}
+
+// Settings
+$('bSet').onclick=()=>{$('sTags').value=S.tags.join('\n');$('sDef').value=S.def;$('sWk').value=S.wk;$('dSet').showModal()};
+$('sClose').onclick=()=>$('dSet').close();
+$('sOk').onclick=()=>{S.tags=$('sTags').value.split('\n').map(s=>s.trim()).filter(Boolean);S.def=+$('sDef').value||0;S.wk=+$('sWk').value;saveS();fillTags();if(!editId)resetForm();render();$('dSet').close()};
+
+(async()=>{db=await openDB();if(navigator.storage?.persist)navigator.storage.persist();fillTags();resetForm();const t=localStorage.getItem('wl_timer');if(t){timerStart=+t;startTick()}await load()})();
+</script></body></html>
