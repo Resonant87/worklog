@@ -154,7 +154,7 @@ $('bShare').onclick=()=>{const un=entries.filter(e=>!e.exported).length;$('shInf
 $('shClose').onclick=()=>$('dShare').close();
 function shareSet(){return $('shNew').checked?entries.filter(e=>!e.exported):entries}
 $('shGo').onclick=async()=>{const list=shareSet();if(!list.length){alert('Nothing to send');return}
- const s=stamp();const files=[new File([makeJSON(list)],`worklog-${s}.json`,{type:'application/json'}),new File([makeCSV(list)],`worklog-${s}.csv`,{type:'text/csv'})];
+ const s=stamp();const files=[new File([makeJSON(list)],`worklog-${s}.json.txt`,{type:'text/plain'}),new File([makeCSV(list)],`worklog-${s}.csv`,{type:'text/csv'})];
  const title=`WorkLog export ${s} (${list.length} entries, ${fmt(list.reduce((a,e)=>a+e.mins,0))} h)`;
  if(navigator.canShare&&navigator.canShare({files})){try{await navigator.share({files,title,text:title});await markSent(list);$('dShare').close()}catch(err){if(err.name!=='AbortError')alert('Share failed: '+err.message+' — try Download.')}}
  else{alert('Sharing files is not supported here; downloading instead.');doDl(list)}};
